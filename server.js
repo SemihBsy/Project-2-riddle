@@ -67,9 +67,9 @@ app.get("/riddles/seed", (req, res) => {
   const startRiddles = [
     { riddle: "I can be cracked. I can be made. I can be told. I can be played. What am I?", answer: "Joke", image: "" },
     { riddle: "If you are justice, please do not lie. What is the price for your blind eye?", answer: "Bribe", image: ""},
-    { riddle: "The less of them you have, the more one is worth?", answer: "Friend", image: false },
-    { riddle: "What Does A Liar Do When He's Dead?", answer: "He lies still", image: false },
-    { riddle: "It Can Be Cruel, Poetic, Or Blind. But When It\’s Denied, It\’s Violence You May Find.", answer: "brown", image: false },
+    { riddle: "The less of them you have, the more one is worth?", answer: "Friend", image: "" },
+    { riddle: "What Does A Liar Do When He's Dead?", answer: "He lies still", image: "" },
+    { riddle: "It Can Be Cruel, Poetic, Or Blind. But When It\’s Denied, It\’s Violence You May Find.", answer: "brown", image: "" },
   ];
 
   // Delete all riddles

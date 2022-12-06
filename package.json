@@ -1,7 +1,7 @@
 {
   "name": "project-2",
   "version": "1.0.0",
-  "description": "",
+  "description": "### Description of the App: Riddler APP allows users to add, create, edit and delete riddles. Users also be able to create their own list of riddles.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,7 +16,15 @@
     "ejs": "^3.1.8",
     "express": "^4.18.2",
     "method-override": "^3.0.0",
-    "mongoose": "^6.7.5",
+    "mongoose": "^6.8.0",
     "morgan": "^1.10.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SemihBsy/Project-2-riddle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SemihBsy/Project-2-riddle/issues"
+  },
+  "homepage": "https://github.com/SemihBsy/Project-2-riddle#readme"
 }

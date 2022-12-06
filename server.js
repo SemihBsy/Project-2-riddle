@@ -17,23 +17,6 @@ mongoose.connection
 .on("close", () => console.log("Disconnected to Mongo"))
 .on("error", (error) => console.log(error))
 
-
-////////////////////////////////////////////////
-// Our Models
-////////////////////////////////////////////////
-// pull schema and model from mongoose
-const {Schema, model} = mongoose
-
-// make riddles schema
-const riddlesSchema = new Schema({
-    riddle: String,
-    answer: String,
-    image: String
-})
-
-// make riddle model
-const Riddle = model("Riddle", riddlesSchema)
-
 // register middleware
 app.use(morgan("dev"))
 app.use("/static", express.static("public"))
@@ -44,8 +27,6 @@ app.use(methodOverride("_method"))
 app.get("/", (req, res) => {
     res.send("<h1>Server is Working</h1>")
 })
-
-
 
 // start the server (listener)
 const PORT = process.env.PORT || 3000

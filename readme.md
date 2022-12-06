@@ -10,5 +10,3 @@ Riddler APP allows users to add, create, edit and delete riddles. Users also be 
 ## Mockups
 
 ![see Trello]()
-
-[Live Website](https://project-2-4ke7.onrender.com/)

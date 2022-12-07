@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/header.ejs') %>
+
+
+        <main>
+            <div>
+              <form action="/riddles" method="POST">
+                <fieldset>
+                    <legend>Create a new Riddle</legend>
+
+                    <label>
+                        RIDDLE: <input type="text" name="name" placeholder="enter a riddle" />
+                    </label>
+                    <label>
+                        ANSWER: <input type="text" name="color" placeholder="enter an answer" />
+                    </label>      
+                    <label>
+                        IMAGE: <input type="text" name="image" />
+                    </label>    
+                </fieldset>
+                
+                <input type="submit" value="Create New Riddle" />
+              </form>        
+
+            </div>
+        </main>
+    </body>
+</html>

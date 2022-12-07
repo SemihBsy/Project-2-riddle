@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head.ejs") %> 
+
+<body>
+    <%- include("../partials/header.ejs") %> 
+    <main>
+        <div>
+            <form action="/riddles/<%= riddle._id %>?_method=PUT" method="post" >
+            
+                <fieldset>
+                    <legend>Edit a <%= riddle.riddle %></legend>
+                    <label>
+                        RIDDLE: <input 
+                            type="text"
+                            name="riddle"
+                            value="<%= riddle.riddle %>"
+                            placeholder="enter a fruit name"
+                        />
+                    </label>
+                    <label>
+                        ANSWER: <input 
+                            type="text"
+                            name="answer"
+                            value="<%= riddle.asnwer %>"
+                            placeholder="enter a color"
+                        />
+                    </label>
+                    <label>
+                        IMAGE: <input type="text" name="image" <%= riddle.image %> />
+                    </label>
+                </fieldset>
+                <input type="submit" value="Update <%= riddle.riddle%>" />
+            </form> 
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

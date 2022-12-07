@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/header.ejs') %>
+
+
+        <main>
+            <div>
+                <a href="/riddles/new"><button>Create New Riddle</button></a>
+                
+                <% for (riddle of riddles) { %>
+                    <article>
+                        <a href="/riddles/<%= riddle._id %>">
+                            <h2>
+                                <%= riddle.riddle %>
+                            </h2>
+                        </a>
+                    </article>
+                <% } %> 
+            </div>
+        </main>
+    </body>
+</html>

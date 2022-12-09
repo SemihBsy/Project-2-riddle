@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
   <%- include("../partials/head.ejs") %>
-
-<body>
-    <%- include("../partials/header.ejs") %>
+</head>
+<%- include("../partials/header.ejs") %>
+<body class="signup">
+    
     <main>
       <div>
         <form action="/user/signup" method="post">
@@ -15,7 +17,7 @@
             <label
               >PASSWORD: <input type="password" name="password" required />
             </label>
-            <input type="submit" value="Create Account" />
+            <input type="submit" value="Create Account" style="background-color: darkgreen; border: none;" />
           </fieldset>
         </form>
       </div>

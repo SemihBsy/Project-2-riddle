@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include("./partials/head.ejs") %>
+  <%- include("./partials/head.ejs", {}) %>
 
-  <body>
-    <%- include("./partials/header.ejs") %>
+
+  <body class="hpage">
     <main>
+      <div class="buttons">
       <div hx-boost>
-        <a href="/user/signup"><button>Signup</button></a>
-        <a href="/user/login"><button>Login</button></a>
+        <a href="/user/signup"><button id="hbutton1" class="hbuttons">Signup</button></a>
+        <a href="/user/login"><button id="hbutton2" class="hbuttons">Login</button></a>
       </div>
+    </div>
     </main>
   </body>
 </html>

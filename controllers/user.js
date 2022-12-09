@@ -48,7 +48,7 @@ router.post("/login", (req, res) => {
     // compare passwords
     const result = await bcrypt.compare(password, user.password);
     // check is match was a success
-    if (!result) res.send("wrong password");
+    if (!result) //res.send("wrong password");
     // save login info in sessions
     req.session.loggedIn = true
     req.session.username = username

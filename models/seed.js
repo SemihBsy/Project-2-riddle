@@ -20,7 +20,7 @@ mongoose.connection.on('open', () => {
           { riddle: "What has two hands, a round face, always runs, yet always stays in place, too?", answer: "A clock!", image: "https://i.imgur.com/9jzqRLI.jpeg" },
           { riddle: "What is always on its way but never arrives?", answer: "Tomorrow", image: "https://i.imgur.com/9jzqRLI.jpeg" },
           { riddle: "The more there is of me, the less you see. What am I?", answer: "I\’m darkness!", image: "https://i.imgur.com/9jzqRLI.jpeg" },
-          { riddle: "If you know me, you’ll want to share me. If you share me, I’ll be gone. What am I?", answer: "A secret!", image: "https://i.imgur.com/9jzqRLI.jpeg" },
+          { riddle: "If you know me, you\’ll want to share me. If you share me, I\’ll be gone. What am I?", answer: "A secret!", image: "https://i.imgur.com/9jzqRLI.jpeg" },
           { riddle: "I have no hands but can knock on your door, and you must open if I do. What am I?", answer: "Opportunity.", image: "https://i.imgur.com/9jzqRLI.jpeg" },
         ];
       
@@ -30,9 +30,9 @@ mongoose.connection.on('open', () => {
           Riddle.create(startRiddles, (err, data) => {
             // send created riddles as response to confirm creation
         // log the create fruits to confirm
-        console.log("--------FRUITS CREATED----------");
+        console.log("--------RIDDLES CREATED----------");
         console.log(data);
-        console.log("--------FRUITS CREATED----------");
+        console.log("--------RIDDLES CREATED----------");
   
         // close the DB connection
         mongoose.connection.close();

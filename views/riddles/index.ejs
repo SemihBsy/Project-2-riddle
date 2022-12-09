@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head.ejs') %>
+    <head>
+    <%- include('../partials/head.ejs', {}) %>
+</head>
 
     <body>
-        <%- include('../partials/header.ejs') %>
+        <img src="https://i.imgur.com/fRhAh0V.jpg" alt="">
 
 
         <main>
             <div>
-                <a href="/riddles/new"><button>Create New Riddle</button></a>
+               
                 
                 <% for (riddle of riddles) { %>
+                    <a href="/riddles/new"><button>Create New Riddle</button></a>
+                    
                     <article>
-                        <a href="/riddles/<%= riddle._id %>">
+                        <a href="/riddles/<%=riddle._id %>">
                             <h2>
-                                <%= riddle.riddle %>
+                                <%= riddle.riddle %> -<%= riddle.answer %>
                             </h2>
                         </a>
                     </article>

@@ -25,11 +25,9 @@ router.use((req, res, next) => {
 /////////////////////////////////////////
 // Routes
 /////////////////////////////////////////
-
-
-router.get('/seed', (req, res) => {
+router.get("/seed", (req, res) => {
        // define data we want to put in the database
-       const startRiddles = [
+    const startRiddles = [
         { riddle: "I can be cracked. I can be made. I can be told. I can be played. What am I?", answer: "A joke!", image: "https://i.imgur.com/9jzqRLI.jpeg" },
         { riddle: "If you are justice, please do not lie. What is the price for your blind eye?", answer: "Bribe", image: "https://i.imgur.com/9jzqRLI.jpeg"},
         { riddle: "The less of them you have, the more one is worth?", answer: "A friend", image: "https://i.imgur.com/9jzqRLI.jpeg" },
@@ -40,9 +38,9 @@ router.get('/seed', (req, res) => {
         { riddle: "What has two hands, a round face, always runs, yet always stays in place, too?", answer: "A clock!", image: "https://i.imgur.com/9jzqRLI.jpeg" },
         { riddle: "What is always on its way but never arrives?", answer: "Tomorrow", image: "https://i.imgur.com/9jzqRLI.jpeg" },
         { riddle: "The more there is of me, the less you see. What am I?", answer: "I\’m darkness!", image: "https://i.imgur.com/9jzqRLI.jpeg" },
-        { riddle: "If you know me, you’ll want to share me. If you share me, I’ll be gone. What am I?", answer: "A secret!", image: "https://i.imgur.com/9jzqRLI.jpeg" },
+        { riddle: "If you know me, you\’ll want to share me. If you share me, I\’ll be gone. What am I?", answer: "A secret!", image: "https://i.imgur.com/9jzqRLI.jpeg" },
         { riddle: "I have no hands but can knock on your door, and you must open if I do. What am I?", answer: "Opportunity.", image: "https://i.imgur.com/9jzqRLI.jpeg" },
-      ];
+    ];
     
       // Delete all riddles
       Riddle.deleteMany({}, (err, data) => {
@@ -56,7 +54,7 @@ router.get('/seed', (req, res) => {
 
 // index route
 router.get("/", (req, res) => {
-    Fruit.find({username: req.session.username}, (err, riddles) => {
+    Riddle.find({username: req.session.username}, (err, riddles) => {
       res.render("riddles/index.ejs", { riddles });
     });
   });
@@ -72,7 +70,7 @@ router.get("/", (req, res) => {
     req.body.username = req.session.username
     // create the new fruit
     Riddle.create(req.body, (err, riddle) => {
-      // redirect the user back to the main fruits page after fruit created
+      // redirect the user back to the main fruits page after riddle created
       res.redirect("/riddles");
     });
 });
@@ -81,9 +79,9 @@ router.get("/", (req, res) => {
   router.get("/:id/edit", (req, res) => {
     // get the id from params
     const id = req.params.id;
-    // get the fruit from the database
+    // get the riddle from the database
     Riddle.findById(id, (err, riddle) => {
-      // render template and send it fruit
+      // render template and send it riddle
       res.render("riddles/edit.ejs", { riddle });
     });
   });
@@ -94,7 +92,7 @@ router.get("/", (req, res) => {
     const id = req.params.id;
     // update the riddle
     Riddle.findByIdAndUpdate(id, req.body, { new: true }, (err, riddle) => {
-      // redirect user back to main page when fruit
+      // redirect user back to main page when riddle
       res.redirect("/riddles");
     });
   });
@@ -102,7 +100,7 @@ router.get("/", (req, res) => {
   router.delete("/:id", (req, res) => {
     // get the id from params
     const id = req.params.id;
-    // delete the fruit
+    // delete the riddle
     Riddle.findByIdAndRemove(id, (err, riddle) => {
       // redirect user back to index page
       res.redirect("/riddles");
@@ -114,7 +112,7 @@ router.get("/", (req, res) => {
     // get the id from params
     const id = req.params.id;
   
-    // find the particular fruit from the database
+    // find the particular riddle from the database
     Riddle.findById(id, (err, riddle) => {
       // render the template with the data from the database
       res.render("riddles/show.ejs", { riddle });
@@ -124,4 +122,4 @@ router.get("/", (req, res) => {
   //////////////////////////////////////////
   // Export the Router
   //////////////////////////////////////////
-  module.exports = router;
+  module.exports = router; 

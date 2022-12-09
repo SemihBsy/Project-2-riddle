@@ -1,3 +1,49 @@
-body{
-    background-image: url('https://i.imgur.com/fRhAh0V.jpg')
+.hpage { 
+    background-image: url("https://i.imgur.com/92B5Trr.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.buttons{
+    justify-content: center;
+    margin-top: 50%;
+}
+
+
+
+.hbuttons {
+    background-image: url('https://i.imgur.com/QK3y0nh.jpg');
+    background-size: 100% 100%;
+    border: none;
+    justify-content: center;
+    opacity: 50%;
+    font-size: 0;
+}
+
+#hbutton1{
+    margin-right: 4rem;
+}
+
+#hbutton2{
+    margin-left: 4rem;
+}
+
+button:hover {
+    background: url('https://i.imgur.com/5Czfe75.jpg');
+    transition: 0.7s;
+    opacity: 100%;
+    font-size: initial;
+}
+
+.signup{
+    background-image: url('https://wallpaperset.com/w/full/f/9/8/210373.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
 }

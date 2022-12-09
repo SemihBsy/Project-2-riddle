@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
     <%- include("../partials/head.ejs") %> 
+</head>
 
 <body>
-    <%- include("../partials/header.ejs") %> 
+    
     <main>
         <div>
             <form action="/riddles/<%= riddle._id %>?_method=PUT" method="post" >
@@ -15,7 +17,7 @@
                             type="text"
                             name="riddle"
                             value="<%= riddle.riddle %>"
-                            placeholder="enter a fruit name"
+                            placeholder="enter a riddle"
                         />
                     </label>
                     <label>
@@ -23,7 +25,7 @@
                             type="text"
                             name="answer"
                             value="<%= riddle.asnwer %>"
-                            placeholder="enter a color"
+                            placeholder="enter a answer"
                         />
                     </label>
                     <label>

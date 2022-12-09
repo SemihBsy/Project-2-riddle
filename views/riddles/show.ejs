@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
     <%- include('../partials/head.ejs') %>
+</head>
 
     <body>
-        <%- include('../partials/header.ejs') %>
-
-
+        
         <main>
             <div>
                     <article>
                             <h2>
                                 <%= riddle.riddle %> 
                             </h2>
-                            <h3> <%= fruit.answer %> </h3>
+                            <h3> <%= riddle.answer %> </h3>
                             <a href="/riddles/<%= riddle._id %>/edit">
                                <button>Edit</button>
                             </a>

@@ -2,7 +2,7 @@
 // Import Our Dependencies
 /////////////////////////////////////////////
 const express = require("express"); // import express
-const middleware = require("./middleware/mid");
+const middleware = require("./middleware/middleware");
 
 /////////////////////////////////////////////////
 // Create our Express Application Object

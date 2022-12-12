@@ -4,10 +4,7 @@
     <%- include('../partials/head.ejs') %>
 </head>
 
-    <body>
-       
-
-
+    <body class="new">
         <main>
             <div>
               <form action="/riddles" method="POST">
@@ -15,17 +12,17 @@
                     <legend>Create a new Riddle</legend>
 
                     <label>
-                        RIDDLE: <input type="text" name="name" placeholder="enter a riddle" />
+                        RIDDLE: <input class="newinput" type="text" name="question" placeholder="enter a riddle" style="width: 50%;" />
                     </label>
                     <label>
-                        ANSWER: <input type="text" name="color" placeholder="enter an answer" />
+                        ANSWER: <input class="newinput" type="text" name="answer" placeholder="enter an answer" style="width: 50%;" />
                     </label>      
                     <label>
-                        IMAGE: <input type="text" name="image" placeholder="image url" />
+                        IMAGE: <input class="newinput" type="text" name="image" placeholder="image url" style="width: 50%;" />
                     </label>    
                 </fieldset>
                 
-                <input type="submit" value="Create New Riddle" />
+                <input type="submit" value="Create New Riddle" style="background-color: rgb(134, 0, 0); border: black;" />
               </form>        
 
             </div>

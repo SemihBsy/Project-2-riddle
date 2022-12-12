@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <%- include('../partials/head.ejs') %>
-</head>
+  <%- include("../partials/head.ejs") %>
 
-    <body>
-        
-        <main>
-            <div>
-                    <article>
-                            <h2>
-                                <%= riddle.riddle %> 
-                            </h2>
-                            <h3> <%= riddle.answer %> </h3>
-                            <a href="/riddles/<%= riddle._id %>/edit">
-                               <button>Edit</button>
-                            </a>
-                            <form action="/riddles/<%= riddle._id %>?_method=DELETE" method="POST">
-                                <input type="submit" value="Delete" />
-                            </form>
-                            <a href="/riddles/"> 
-                                <button>Back</button>
-                            </a>
-                    </article>
+  <body>
+ 
+    <main>
+      <div>
 
-            </div>
-        </main>
-    </body>
+        <article x-data="{showTools: false}">
+          <h2><%= riddle.question %></h2>
+          <button x-on:click="showTools = !showTools">Show Answer</button>
+          <h3><%= riddle.answer%></h3>
+          <button x-on:click="showTools = !showTools">Show Options</button>
+          <div x-show="showTools" x-transition>
+          <a href="/riddles/<%= riddle._id %>/edit"><button>Edit</button></a>
+          <form action="/riddles/<%= riddle._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete"/>
+          </form>
+          <a href="/riddles/"><button>Back to Main</button></a>
+          </div>
+        </article>
+
+      </div>
+    </main>
+  </body>
 </html>

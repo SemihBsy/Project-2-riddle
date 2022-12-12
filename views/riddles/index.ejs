@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <%- include('../partials/head.ejs', {}) %>
-</head>
+  <%- include("../partials/head.ejs") %>
 
-    <body>
-        <img src="https://i.imgur.com/fRhAh0V.jpg" alt="">
+  <body class="index">
+    <%- include("../partials/header.ejs") %>
+    <main>
+      <div>
+          <a href="/riddles/new"><button style="background-color: darkgreen; border: none;">Create A New Riddle</button></a>
+          <a href="/user/logout"><button style="background-color: darkgreen; border: none;">Logout</button></a>
+          <div>
+        <% for (riddle of riddles) { %>
 
+        
+            <section> <%= riddle.question %>
+            <h2 
+            hx-get="/riddles/<%= riddle._id %>"
+            hx-trigger="click"
+            hx-target="div"
+            hx-swap="innerHTML">
+            </h2>
+              <img style="width: 10%; height: 10%;" class="main" src="<%= riddle.image %>"  alt="">
+            
+            
 
-        <main>
-            <div>
-               
-                
-                <% for (riddle of riddles) { %>
-                    <a href="/riddles/new"><button>Create New Riddle</button></a>
-                    
-                    <article>
-                        <a href="/riddles/<%=riddle._id %>">
-                            <h2>
-                                <%= riddle.riddle %> -<%= riddle.answer %>
-                            </h2>
-                        </a>
-                    </article>
-                <% } %> 
-            </div>
-        </main>
-    </body>
+        </section>
+
+        <% } %>
+      </div>
+    </main>
+  </body>
 </html>

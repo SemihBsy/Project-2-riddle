@@ -11,12 +11,12 @@
             <form action="/riddles/<%= riddle._id %>?_method=PUT" method="post" >
             
                 <fieldset>
-                    <legend>Edit a <%= riddle.riddle %></legend>
+                    <legend>Edit a riddle</legend>
                     <label>
                         RIDDLE: <input 
                             type="text"
-                            name="riddle"
-                            value="<%= riddle.riddle %>"
+                            name="question"
+                            value="<%= riddle.question %>"
                             placeholder="enter a riddle"
                         />
                     </label>
@@ -24,7 +24,7 @@
                         ANSWER: <input 
                             type="text"
                             name="answer"
-                            value="<%= riddle.asnwer %>"
+                            value="<%= riddle.answer %>"
                             placeholder="enter a answer"
                         />
                     </label>
@@ -32,7 +32,7 @@
                         IMAGE: <input type="text" name="image" <%= riddle.image %> />
                     </label>
                 </fieldset>
-                <input type="submit" value="Update <%= riddle.riddle%>" />
+                <input type="submit" value="Update the Riddle" />
             </form> 
 
         </div>

@@ -5,21 +5,20 @@
 
 
 </head>
-<%- include("../partials/header.ejs") %> 
+
 <body>
-    
     <main>
     <div class="login">
         <form action="/user/login" method="post">
         <fieldset>
             <legend>User Login</legend>
             <label
-            >USERNAME: <input type="text" name="username" required />
+            >USERNAME: <input class="loginput" type="text" name="username" style="width: 10em; color: lawngreen;" required />
             </label>
             <label
-            >PASSWORD: <input type="password" name="password" required />
+            >PASSWORD: <input class="loginput" type="password" name="password" style="width: 10em; color: greenyellow;" required />
             </label>
-            <input type="submit" value="Login" />
+            <input type="submit" value="Login" style="background-color: darkgreen; border: none;" />
         </fieldset>
         </form>
     </div>

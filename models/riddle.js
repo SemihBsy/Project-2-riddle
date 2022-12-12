@@ -11,7 +11,7 @@ const { Schema, model } = mongoose;
 
 // make fruits schema
 const riddlesSchema = new Schema({
-  riddle: String,
+  question: String,
   answer: String,
   image: String,
   username: String

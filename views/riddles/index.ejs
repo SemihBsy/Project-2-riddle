@@ -12,17 +12,16 @@
         <% for (riddle of riddles) { %>
 
         
-            <section> <%= riddle.question %>
+            <section class="each-riddle"> <%= riddle.question %>
             <h2 
             hx-get="/riddles/<%= riddle._id %>"
             hx-trigger="click"
             hx-target="div"
             hx-swap="innerHTML">
+            <img style="width: 10%; height: 10%;" class="main" src="<%= riddle.image %>"  alt="">
             </h2>
-              <img style="width: 10%; height: 10%;" class="main" src="<%= riddle.image %>"  alt="">
+              
             
-            
-
         </section>
 
         <% } %>

@@ -4,7 +4,7 @@
     <%- include("../partials/head.ejs") %> 
 </head>
 
-<body>
+<body class="edit">
     
     <main>
         <div>
@@ -18,6 +18,7 @@
                             name="question"
                             value="<%= riddle.question %>"
                             placeholder="enter a riddle"
+                            style="width: 40%"
                         />
                     </label>
                     <label>
@@ -26,13 +27,14 @@
                             name="answer"
                             value="<%= riddle.answer %>"
                             placeholder="enter a answer"
+                            style="width: 40%"
                         />
                     </label>
                     <label>
-                        IMAGE: <input type="text" name="image" <%= riddle.image %> />
+                        IMAGE: <input type="text" name="image" style="width: 40%" <%= riddle.image %> />
                     </label>
                 </fieldset>
-                <input type="submit" value="Update the Riddle" />
+                <input type="submit" value="Update the Riddle" style="background-color: rgb(0, 74, 0); border: none;" />
             </form> 
 
         </div>

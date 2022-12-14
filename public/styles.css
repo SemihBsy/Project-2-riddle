@@ -57,6 +57,14 @@ button:hover {
     background-color: black;
 }
 
+.edit{
+    background-image: url("https://i.imgur.com/fOtQDZx.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
+}
+
 .login{
     background-image: url("https://i.imgur.com/QK3y0nh.jpg");
     background-repeat: no-repeat;
